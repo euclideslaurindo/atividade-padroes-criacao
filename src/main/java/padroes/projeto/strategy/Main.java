@@ -8,16 +8,20 @@ public class Main {
         String destino = "Aeroporto";
         double distancia = 18.0;
 
-        // Estratégia 1: carro
-        System.out.println("=== Opção 1 ===");
+        System.out.println(" opção 1");
         app.setEstrategia(new RotaDeCarro());
         app.calcularRota(origem, destino, distancia);
 
         System.out.println();
 
-        // Configure a estratégia de rota de ônibus
+        System.out.println(" opção 2");
+        app.setEstrategia(new RotaDeOnibus());
+        app.calcularRota(origem, destino, distancia);
 
-        //Configure a estratégia de rota a pé
-       
+        System.out.println();
+
+        System.out.println("opção 3 ");
+        app.setEstrategia(new RotaAPe());
+        app.calcularRota(origem, destino, distancia);
     }
 }
